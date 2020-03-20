@@ -9,6 +9,9 @@ tree.onclick = function(event) {
         return;
     }
     const childrenContainer = event.target.parentNode.querySelector('ul');
-    if (!childrenContainer) return;
-    childrenContainer.hidden = !childrenContainer.hidden;
+    if (childrenContainer){
+        childrenContainer.hidden = !childrenContainer.hidden;
+    } else {
+        return;
+    }
 }
